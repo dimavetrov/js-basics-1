@@ -78,10 +78,11 @@ function chessBoard(size) {
   // When you have a program that generates this pattern,
   // define a variable size = 8 and change the program so that
   // it works for any size, outputting a grid of the given width and height.
+	var size1 = size ||8;
 	var s;	
-	for(var i=0;i<8;i++){
+	for(var i=0;i<size1;i++){
 	s = " ";
-	for(var j=0;j<8;j++){
+	for(var j=0;j<size1;j++){
 	if(i % 2 == false){
 	if(j %2 == false) s = s + "#";
 	else s = s +" ";
