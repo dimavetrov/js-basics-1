@@ -78,18 +78,25 @@ function chessBoard(size) {
   // When you have a program that generates this pattern,
   // define a variable size = 8 and change the program so that
   // it works for any size, outputting a grid of the given width and height.
+	var s;	
+	for(var i=0;i<8;i++){
+	s = " ";
+	for(var j=0;j<8;j++){
+	if(i % 2 == false){
+	if(j %2 == false) s = s + "#";
+	else s = s +" ";
 
-var res;
-if(a>b && c>b) res =( a*a) + (c*c);
-if(b>a && c>a) res = (b*b) + (c*c);
-if(a>c && b>c) res = (a*a) + (b*b);
-return res;
+	}
+	else {
+		if(j % 2 == false) s = s +" ";
+		else s = s +"#";
+	}		
+
+
 }
-function show () {
-var a = parseInt(prompt("a:", ""));
-var b = parseInt(prompt("b:",""));
-var c = parseInt(prompt("c:", ""));
-console.log(perebor(a, b, c));
+	return s;
+}
+
 
 }
 
