@@ -37,16 +37,16 @@ function fizzBuzz() {
   // or "Buzz" for numbers divisible by only one of those).
         var n1 = 1;
         var n2 = 100;
-        for( var i = n1; i < n2; i++){
+        for( var i = n1; i <= n2; i++){
           if ( i % 3 == 0 && i % 5 ==0){
-            console.log( i + ": FizzBuzz");
+            console.log("FizzBuzz");
           }
           else if (i % 3 == 0){
-            console.log(i+ ": Fizz");
+            console.log("Fizz");
           }
 
           else if ( i % 5 == 0){
-            console.log(i + ': Buzz');
+            console.log("Buzz");
           }else{
             console.log(i);
           }
