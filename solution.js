@@ -1,4 +1,5 @@
-﻿  // Write a function that takes three numbers and returns
+﻿function squaresOfMax(a, b, c) {
+  // Write a function that takes three numbers and returns
   // sum of squares of two largest
 var res;
 if(a>b && c>b) res =( a*a) + (c*c);
@@ -7,12 +8,6 @@ if(a>c && b>c) res = (a*a) + (b*b);
 return res;
 }
 
-function show () {
-var a =parseInt(prompt("a:", ""));
-var b = parseInt(prompt("b:",""));
-var c = parseInt(prompt("c:", ""));
-console.log(squaresOfMax(a ,b,c));
-}
 //---------------------------------------------------------------------------//
 function drawTriangle() {
   // Write a loop that makes seven calls to console.log to output the following triangle:
@@ -77,28 +72,15 @@ function chessBoard(size) {
   // When you have a program that generates this pattern,
   // define a variable size = 8 and change the program so that
   // it works for any size, outputting a grid of the given width and height.
-	var size1 = size || 8;
-	var s;	
-	for(var i=0;i<size1;i++){
-	s = " ";
-	for(var j=0;j<size1;j++){
-	if(i % 2 == false){
-	if(j %2 == false) s = s + "#";
-	else s = s +" ";
+	function chessBoard(size) {
+   var arr = [];
+   for (i = 1; i <= size; i++) {
+    var a = Array(size + 1).join((i % 2 !== 0) ? " #" : "# ").slice(0, size);
+    arr.push(a);
+  }
+   return arr.join('\n');
+ }
 
-	}
-	else {
-		if(j % 2 == false) s = s +" ";
-		else s = s +"#";
-	}		
-
-
-}
-	return s;
-}
-
-
-}
 
 module.exports.squaresOfMax = squaresOfMax;
 module.exports.drawTriangle = drawTriangle;
