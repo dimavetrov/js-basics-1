@@ -2,9 +2,9 @@
   // Write a function that takes three numbers and returns
   // sum of squares of two largest
 var res;
-if(a>b && c>b) res =( a*a) + (c*c);
-if(b>a && c>a) res = (b*b) + (c*c);
-if(a>c && b>c) res = (a*a) + (b*b);
+if(a>=b && c>=b) res =( a*a) + (c*c);
+if(b>=a && c>=a) res = (b*b) + (c*c);
+if(a>=c && b>=c) res = (a*a) + (b*b);
 return res;
 }
 
@@ -20,7 +20,7 @@ function drawTriangle() {
   // ######
   // #######
 
- var x = " ";
+ var x = "";
   for(var i=0;i<7;i++){
     x = x +"#";
     console.log(x);
@@ -38,14 +38,14 @@ function fizzBuzz() {
         var n1 = 1;
         var n2 = 100;
         for( var i = n1; i < n2; i++){
-          if ( x % 3 == 0 && x % 5 ==0){
+          if ( i % 3 == 0 && i % 5 ==0){
             console.log( i + ": FizzBuzz");
           }
-          else if (x % 3 == 0){
+          else if (i % 3 == 0){
             console.log(i+ ": Fizz");
           }
 
-          else if ( x % 5 == 0){
+          else if ( i % 5 == 0){
             console.log(i + ': Buzz');
           }
         }
