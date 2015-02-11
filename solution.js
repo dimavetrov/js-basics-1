@@ -47,6 +47,8 @@ function fizzBuzz() {
 
           else if ( i % 5 == 0){
             console.log(i + ': Buzz');
+          }else{
+            console.log(i);
           }
         }
 
